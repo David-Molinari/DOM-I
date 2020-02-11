@@ -40,3 +40,85 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+// Adding navs
+let navs = document.querySelectorAll('a');
+
+navs[0].textContent = siteContent["nav"]["nav-item-1"];
+navs[1].textContent = siteContent["nav"]["nav-item-2"];
+navs[2].textContent = siteContent["nav"]["nav-item-3"];
+navs[3].textContent = siteContent["nav"]["nav-item-4"];
+navs[4].textContent = siteContent["nav"]["nav-item-5"];
+navs[5].textContent = siteContent["nav"]["nav-item-6"];
+
+
+// Adding next section
+let h1 = document.querySelector('h1');
+h1.textContent = siteContent["cta"]["h1"];
+
+let button = document.querySelector('button');
+button.textContent = siteContent["cta"]["button"];
+
+let image = document.getElementById('cta-img');
+image.setAttribute('src', siteContent["cta"]["img-src"]);
+
+
+// Adding next section
+let h4s = document.querySelectorAll('h4');
+
+h4s[0].textContent = siteContent["main-content"]["features-h4"];
+h4s[1].textContent = siteContent["main-content"]["about-h4"];
+h4s[2].textContent = siteContent["main-content"]["services-h4"];
+h4s[3].textContent = siteContent["main-content"]["product-h4"];
+h4s[4].textContent = siteContent["main-content"]["vision-h4"];
+
+let ps = document.querySelectorAll('p');
+
+ps[0].textContent = siteContent["main-content"]["features-content"];
+ps[1].textContent = siteContent["main-content"]["about-content"];
+ps[2].textContent = siteContent["main-content"]["services-content"];
+ps[3].textContent = siteContent["main-content"]["product-content"];
+ps[4].textContent = siteContent["main-content"]["vision-content"];
+
+let image2 = document.getElementById('middle-img');
+image2.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
+// Adding next section
+h4s[5].textContent = siteContent["contact"]["contact-h4"];
+
+ps[5].textContent = siteContent["contact"]["address"];
+ps[6].textContent = siteContent["contact"]["phone"];
+ps[7].textContent = siteContent["contact"]["email"];
+
+ps[8].textContent = siteContent["footer"]["copyright"];
+
+
+// Shrink contact section width
+let contact = document.querySelector(".contact");
+contact.style.width = "200px";
+
+
+// Adding new content
+for (let i = 0; i < navs.length; i++) {
+  navs[i].style.color = "green";
+}
+
+let nav = document.querySelector('nav');
+
+let newer = document.createElement('a');
+newer.setAttribute('img', '#');
+newer.textContent = 'New';
+newer.style.color = 'green';
+nav.appendChild(newer);
+
+let newera = document.createElement('a');
+newera.setAttribute('img', '#');
+newera.textContent = 'New';
+newera.style.color = 'green';
+nav.prepend(newera);
+
+
+// Stretch styling
+button.style.backgroundColor = 'lightgrey';
